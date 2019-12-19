@@ -2,10 +2,10 @@ import textwrap
 import time
 
 available_clocks = [
-        ('monotonic', time.monotonic),
-        ('perf_counter', time.perf_counter),
-        ('process_time', time.process_time),
-        ('time', time.time),
+    ('monotonic', time.monotonic),
+    ('perf_counter', time.perf_counter),
+    ('process_time', time.process_time),
+    ('time', time.time),
 ]
 
 for clock_name, func in available_clocks:
@@ -16,6 +16,4 @@ for clock_name, func in available_clocks:
             monotonic: {info.monotonic}
             resolution: {info.resolution}
             current: {current}
-            ''').format(name=clock_name, info=time.get_clock_info(clock_name),current=func()))
-
-
+            ''').format(name=clock_name, info=time.get_clock_info(clock_name), current=func()))
