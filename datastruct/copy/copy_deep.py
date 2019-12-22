@@ -1,6 +1,7 @@
 import copy
 import functools
 
+# simple example of using the deep copy module
 @functools.total_ordering
 class MyClass:
 

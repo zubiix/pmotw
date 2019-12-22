@@ -14,7 +14,6 @@ class MyClass:
     return self.name > other.name
   
 a = MyClass('a')
-# the reference is to the same object
 my_list = [a]
 dup = copy.copy(my_list)
 
