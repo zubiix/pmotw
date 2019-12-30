@@ -1,6 +1,7 @@
 import struct
 import binascii
 
+# use struct pack to convert a string to a packed byte
 values = (1, 'ab'.encode('utf-8'), 2.7)
 s = struct.Struct('I 2s f')
 packed_data = s.pack(*values)
